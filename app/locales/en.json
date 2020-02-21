@@ -1,0 +1,22 @@
+{
+	"appName": "Blitz Reading",
+	"navigation": {
+		"home": "Home",
+		"authHome": "Home",
+		"singUp": "Sing Up",
+		"signIn": "Sign In",
+		"passwordReset": "Reset Password",
+		"settings": "Settings"
+	},
+	"home": {
+		"welcome": "Welcome to %{appName}!"
+	},
+	"buttons": {
+		"signIn": "Sing In",
+		"signUp": "Sing Up"
+	},
+	"placeholders": {
+		"password": "Password",
+		"username": "Username"
+	}
+}
