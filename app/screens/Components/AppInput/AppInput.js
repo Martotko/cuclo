@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
-import { TextInput } from 'react-native';
+import React, {Component} from 'react';
+import {TextInput} from 'react-native';
 import PropTypes from 'prop-types';
-import { AppVariables } from '../../../AppStyles';
-import { StyleSheet } from 'react-native';
-
+import {AppVariables} from '../../../AppStyles';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
 	textInput: {
 		backgroundColor: AppVariables.appGreyLight,
 		height: 40,
 		width: '80%',
-		borderRadius: 5,
+		borderRadius: AppVariables.appButtonBorderRadius,
 		borderColor: AppVariables.appBorderColor,
 		borderWidth: 1,
 		marginBottom: 10,
-		paddingLeft: 5
-	}
+		paddingLeft: 5,
+	},
 });
 
 export default class AppInput extends Component {
@@ -23,8 +22,8 @@ export default class AppInput extends Component {
 		super(props);
 
 		this.state = {
-			value: ''
-		}
+			value: '',
+		};
 	}
 
 	/**
@@ -32,13 +31,13 @@ export default class AppInput extends Component {
 	 * @private
 	 */
 	_setValue(sText) {
-		this.setState({ value: sText })
+		this.setState({value: sText});
 	}
 
 	render() {
-		const { sPlaceholder } = this.props;
-		const { textInput } = styles;
-		const { value } = this.state;
+		const {sPlaceholder} = this.props;
+		const {textInput} = styles;
+		const {value} = this.state;
 		return (
 			<TextInput
 				style={textInput}
@@ -51,12 +50,9 @@ export default class AppInput extends Component {
 }
 
 AppInput.propTypes = {
-	sPlaceholder: PropTypes.string
+	sPlaceholder: PropTypes.string,
 };
 
 AppInput.defaultProps = {
-	sPlaceholder: 'Placeholder'
+	sPlaceholder: 'Placeholder',
 };
-
-
-

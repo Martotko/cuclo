@@ -1,21 +1,29 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Text, View, Button} from 'react-native';
 import styles from './styles';
 import AuthContext from '../../AuthContext';
 import PropTypes from 'prop-types';
+import AppHeader from '../Components/AppHeader';
 
-function HomeScreen({navigation}) {
-  const { signOut } = React.useContext(AuthContext);
+export default class HomeScreen extends Component {
+	constructor(props) {
+		super(props);
+	}
 
-  return (
-      <View style={styles.container}>
-        <Text>This is the HomeScreen.</Text>
-        <Button
-        title="Go to Details"
-        onPress={() => signOut()}
-      />
-      </View>
-    );
+	render() {
+		return (
+			<>
+				<AppHeader navigation={this.props.navigation} />
+				<View style={styles.container}>
+					<Text>This is the HomeScreen.</Text>
+					<Button
+						title="Go to Details"
+						onPress={() => this.context.signOut()}
+					/>
+				</View>
+			</>
+		);
+	}
 }
 
-export default HomeScreen;
+HomeScreen.contextType = AuthContext;

@@ -1,13 +1,16 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 export const AppVariables = {
 	appGrey: '#a99f9f',
 	appGreyLight: '#f1f0f0',
 	appBorderColor: '#444',
 	appWhite: '#fff',
+	appBlack: '#000',
 	appButtonFontSize: 20,
-	appOrange: '#ffa401'
-}
+	appOrange: '#ffa401',
+	appTitleFontSize: 22,
+	appButtonBorderRadius: 5,
+};
 
 const AppStyles = StyleSheet.create({
 	container: {
@@ -19,7 +22,6 @@ const AppStyles = StyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
-
 });
 
 export default AppStyles;

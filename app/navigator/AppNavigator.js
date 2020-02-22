@@ -1,30 +1,40 @@
-
-
 import * as React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import i18n from '../i18n';
 import HomeScreen from '../screens/Home';
 import SettingsScreen from '../screens/Settings';
+import {AppVariables} from '../AppStyles';
 
-const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 
 export default function AppNavigator() {
 	return (
-		<Tab.Navigator initialRouteName="Home">
-			<Tab.Screen
+		<Drawer.Navigator
+			drawerStyle={{
+				backgroundColor: AppVariables.appGreyLight,
+			}}
+			drawerContentOptions={{
+				activeBackgroundColor: AppVariables.appGrey,
+				activeTintColor: AppVariables.appWhite,
+				labelStyle: {
+					fontSize: AppVariables.appButtonFontSize,
+					borderRadius: AppVariables.appButtonBorderRadius,
+				},
+			}}>
+			<Drawer.Screen
 				name="Home"
 				component={HomeScreen}
 				options={{
-					title: i18n.t('navigation.home')
+					title: i18n.t('navigation.home'),
 				}}
 			/>
-			<Tab.Screen
+			<Drawer.Screen
 				name="Settings"
 				component={SettingsScreen}
 				options={{
-					title: i18n.t('navigation.settings')
+					title: i18n.t('navigation.settings'),
 				}}
 			/>
-		</Tab.Navigator>
+		</Drawer.Navigator>
 	);
 }

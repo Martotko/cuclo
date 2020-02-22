@@ -1,17 +1,17 @@
 import React from 'react';
-import { TouchableOpacity, Text } from 'react-native';
+import {TouchableOpacity, Text} from 'react-native';
 import PropTypes from 'prop-types';
 import {AppVariables} from '../../../AppStyles';
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 AppButton.propTypes = {
 	fnPress: PropTypes.func,
-	sText: PropTypes.string
+	sText: PropTypes.string,
 };
 
 AppButton.defaultProps = {
-	sText: "Click me",
-	fnPress: () => {}
+	sText: 'Click me',
+	fnPress: () => {},
 };
 
 const styles = StyleSheet.create({
@@ -22,29 +22,22 @@ const styles = StyleSheet.create({
 		backgroundColor: AppVariables.appGrey,
 		width: '80%',
 		marginBottom: 10,
-		borderRadius: 5
+		borderRadius: AppVariables.appButtonBorderRadius,
 	},
 	textButton: {
 		color: AppVariables.appWhite,
 		fontSize: AppVariables.appButtonFontSize,
-		textAlign: 'center'
-	}
+		textAlign: 'center',
+	},
 });
 
-
-
 export default function AppButton(props) {
-	const { button, textButton } = styles;
-	const { fnPress, sText } = props;
+	const {button, textButton} = styles;
+	const {fnPress, sText} = props;
 
 	return (
-		<TouchableOpacity
-		style={button}
-		onPress={fnPress}
-		>
+		<TouchableOpacity style={button} onPress={fnPress}>
 			<Text style={textButton}>{sText}</Text>
 		</TouchableOpacity>
 	);
 }
-
-
