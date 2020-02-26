@@ -27,6 +27,8 @@ const styles = StyleSheet.create({
 	},
 	containerTitle: {
 		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
 	},
 	buttonStyle: {
 		alignItems: 'flex-end',
@@ -54,7 +56,7 @@ export default function AppHeader(props) {
 			</View>
 			<View style={containerTitle}>
 				<Text style={text} numberOfLines={1}>
-					Test TestTestTestTestTestTestTestTest Test
+					{props.route?.name}
 				</Text>
 			</View>
 			<View>

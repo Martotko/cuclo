@@ -1280,6 +1280,10 @@
         "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/35380797da0fa73c7be5d59a84684254/res/anim/abc_tooltip_exit.xml"
     },
     {
+        "merged": "/Users/i515832/Desktop/Projects/cuclo/android/app/build/intermediates/res/merged/release/raw_node_modules_reactnativevectoricons_glyphmaps_ionicons.json.flat",
+        "source": "/Users/i515832/Desktop/Projects/cuclo/android/app/build/generated/res/react/release/raw/node_modules_reactnativevectoricons_glyphmaps_ionicons.json"
+    },
+    {
         "merged": "/Users/i515832/Desktop/Projects/cuclo/android/app/build/intermediates/res/merged/release/anim_abc_slide_in_bottom.xml.flat",
         "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/35380797da0fa73c7be5d59a84684254/res/anim/abc_slide_in_bottom.xml"
     },

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Feb 19 17:07:41 EET 2020
+#Sun Feb 23 11:48:45 EET 2020
 56.path=lib/arm64-v8a/libjsinspector.so
 5.base=/Users/i515832/Desktop/Projects/cuclo/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 42.base=/Users/i515832/Desktop/Projects/cuclo/android/app/build/intermediates/transforms/mergeJniLibs/debug/0

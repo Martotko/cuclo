@@ -171,6 +171,23 @@
                     }
                 },
                 {
+                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/0ce5849f0345cc837f98ec9a4d65e052/res/values/values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "1028",
+                        "endOffsets": "1079"
+                    },
+                    "to": {
+                        "startLines": "7306",
+                        "startColumns": "4",
+                        "startOffsets": "451260",
+                        "endColumns": "1028",
+                        "endOffsets": "452284"
+                    }
+                },
+                {
                     "source": "/Users/i515832/Desktop/Projects/cuclo/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3",

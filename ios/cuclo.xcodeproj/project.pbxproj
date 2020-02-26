@@ -62,6 +62,7 @@
 		90628361334D3FAEBEA3A823 /* libPods-cuclo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cuclo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0D99A77525969FD5F9FAFD /* libPods-cucloTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cucloTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C045E4C33AB93D37088A29 /* Pods-cuclo-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cuclo-tvOS.release.xcconfig"; path = "Target Support Files/Pods-cuclo-tvOS/Pods-cuclo-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		C64D6DD424019172006A3775 /* cuclo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cuclo-Bridging-Header.h"; sourceTree = "<group>"; };
 		D07401056448800DC8E76796 /* Pods-cucloTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cucloTests.release.xcconfig"; path = "Target Support Files/Pods-cucloTests/Pods-cucloTests.release.xcconfig"; sourceTree = "<group>"; };
 		D7DC5E1D82154764BDD153E6 /* Pods-cuclo-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cuclo-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-cuclo-tvOSTests/Pods-cuclo-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		D8205A66919AA6ECA9352B67 /* Pods-cucloTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cucloTests.debug.xcconfig"; path = "Target Support Files/Pods-cucloTests/Pods-cucloTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				C64D6DD424019172006A3775 /* cuclo-Bridging-Header.h */,
 			);
 			name = cuclo;
 			sourceTree = "<group>";
@@ -194,7 +196,6 @@
 				D8205A66919AA6ECA9352B67 /* Pods-cucloTests.debug.xcconfig */,
 				D07401056448800DC8E76796 /* Pods-cucloTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -293,6 +294,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1020;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -309,6 +313,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -675,6 +680,7 @@
 			baseConfigurationReference = 014E62132E1B83662B640735 /* Pods-cuclo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = cuclo/Info.plist;
@@ -686,6 +692,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = cuclo;
+				SWIFT_OBJC_BRIDGING_HEADER = "cuclo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -695,6 +704,7 @@
 			baseConfigurationReference = 0CD01BAEF9596861F9239501 /* Pods-cuclo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = cuclo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -705,6 +715,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = cuclo;
+				SWIFT_OBJC_BRIDGING_HEADER = "cuclo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
