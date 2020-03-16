@@ -7,12 +7,13 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
 	textInput: {
 		backgroundColor: AppVariables.appGreyLight,
-		height: 40,
+		height: 60,
 		width: '80%',
 		borderRadius: AppVariables.appButtonBorderRadius,
 		borderColor: AppVariables.appBorderColor,
 		borderWidth: 1,
 		marginBottom: 10,
+		fontSize: AppVariables.appButtonFontSize,
 		paddingLeft: 5,
 	},
 });

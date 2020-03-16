@@ -6,9 +6,9 @@ export const AppVariables = {
 	appBorderColor: '#444',
 	appWhite: '#fff',
 	appBlack: '#000',
-	appButtonFontSize: 20,
+	appButtonFontSize: 28,
 	appOrange: '#ffa401',
-	appTitleFontSize: 22,
+	appTitleFontSize: 28,
 	appButtonBorderRadius: 5,
 };
 

@@ -5,6 +5,7 @@ import AppButton from '../Components/AppButton';
 import i18n from '../../i18n';
 import AppStyles from '../../AppStyles';
 import AppInput from '../Components/AppInput';
+import firebase from 'react-native-firebase';
 
 const styles = StyleSheet.create({
 	mainContainer: {
@@ -18,6 +19,13 @@ export default class SignInScreen extends Component {
 
 		this.refUsername = React.createRef();
 		this.refPassword = React.createRef();
+
+		console.log(
+			firebase
+				.auth()
+				.signInAnonymously()
+				.then(a => console.log(a)),
+		);
 	}
 
 	/**
@@ -29,7 +37,13 @@ export default class SignInScreen extends Component {
 		const sPassword = this.refPassword.current.state.value;
 
 		if (sUsername && sPassword) {
-			this.context.signIn(sUsername, sPassword);
+			// sUsername, sPassword);
+			firebase
+				.auth()
+				.signInWithEmailAndPassword(sUsername, sPassword)
+				.then(data =>
+					this.context.signIn(data.user._user.refreshToken),
+				);
 		}
 	}
 

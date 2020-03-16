@@ -14,7 +14,7 @@ AppHeader.defaultProps = {};
 const styles = StyleSheet.create({
 	container: {
 		width: '100%',
-		height: 80,
+		height: 100,
 		backgroundColor: AppVariables.appGrey,
 		justifyContent: 'center',
 		alignItems: 'flex-end',
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
 	},
 	iconStyle: {
 		color: AppVariables.appGreyLight,
-		fontSize: 30,
+		fontSize: 40,
 	},
 });
 
