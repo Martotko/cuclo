@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import {StyleSheet} from 'react-native';
 import AppStyles from '../../AppStyles';
 import AppInput from '../Components/AppInput';
 import AppButton from '../Components/AppButton';
 import i18n from '../../i18n';
-import AuthContext from '../../AuthContext';
 
 const styles = StyleSheet.create({});
 
@@ -52,5 +51,3 @@ export default class SignUpScreen extends Component {
 		);
 	}
 }
-
-SignUpScreen.contextType = AuthContext;

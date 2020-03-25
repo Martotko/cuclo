@@ -5,7 +5,6 @@ import {AppVariables} from '../../../AppStyles';
 import {StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import AuthContext from '../../../AuthContext';
 
 AppHeader.propTypes = {};
 
@@ -43,7 +42,6 @@ const styles = StyleSheet.create({
 
 export default function AppHeader(props) {
 	const {container, containerTitle, buttonStyle, iconStyle, text} = styles;
-	const {signOut} = React.useContext(AuthContext);
 
 	return (
 		<View style={container}>

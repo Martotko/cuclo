@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View, Button} from 'react-native';
 import styles from './styles';
-import AuthContext from '../../AuthContext';
 import PropTypes from 'prop-types';
 import AppHeader from '../Components/AppHeader';
 import AudioPlayer from '../Components/AudioPLayer';
@@ -25,5 +24,3 @@ export default class HomeScreen extends Component {
 		);
 	}
 }
-
-HomeScreen.contextType = AuthContext;
