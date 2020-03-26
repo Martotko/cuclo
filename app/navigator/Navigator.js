@@ -7,27 +7,17 @@ import LoadingScreen from '../screens/Loading';
 
 const Stack = createStackNavigator();
 
-function Navigator(props) {
-	const {userToken, isLoading} = props;
-
-	if (isLoading) {
-		// We haven't finished checking for the token yet
-		return <LoadingScreen />;
-	}
-
+function Navigator() {
 	return (
 		<NavigationContainer>
 			<Stack.Navigator
 				screenOptions={{
 					headerShown: false,
+					initialRouteName: 'Initial',
 				}}>
-				{userToken == null ? (
-					// No token found, user isn't signed in
-					<Stack.Screen name="Auth" component={AuthNavigator} />
-				) : (
-					// User is signed in
-					<Stack.Screen name="App" component={AppNavigator} />
-				)}
+				<Stack.Screen name="Initial" component={LoadingScreen} />
+				<Stack.Screen name="Auth" component={AuthNavigator} />
+				<Stack.Screen name="App" component={AppNavigator} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

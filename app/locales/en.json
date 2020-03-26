@@ -17,6 +17,6 @@
 	},
 	"placeholders": {
 		"password": "Password",
-		"username": "Username"
+		"email": "Email"
 	}
 }

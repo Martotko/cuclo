@@ -16,7 +16,7 @@ export default class SignInScreen extends Component {
 	constructor(props) {
 		super(props);
 
-		this.refUsername = React.createRef();
+		this.refEmail = React.createRef();
 		this.refPassword = React.createRef();
 	}
 
@@ -25,11 +25,11 @@ export default class SignInScreen extends Component {
 	 * @private
 	 */
 	_submit() {
-		const sUsername = this.refUsername.current.state.value;
+		const sEmail = this.refEmail.current.state.value;
 		const sPassword = this.refPassword.current.state.value;
 
-		if (sUsername && sPassword) {
-			AuthService.signIn(sUsername, sPassword);
+		if (sEmail && sPassword) {
+			AuthService.signIn(sEmail, sPassword);
 		}
 	}
 
@@ -40,8 +40,8 @@ export default class SignInScreen extends Component {
 		return (
 			<View style={[container, mainContainer]}>
 				<AppInput
-					ref={this.refUsername}
-					sPlaceholder={i18n.t('placeholders.username')}
+					ref={this.refEmail}
+					sPlaceholder={i18n.t('placeholders.email')}
 				/>
 				<AppInput
 					ref={this.refPassword}

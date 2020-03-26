@@ -5,6 +5,7 @@ import AppStyles from '../../AppStyles';
 import AppInput from '../Components/AppInput';
 import AppButton from '../Components/AppButton';
 import i18n from '../../i18n';
+import {AuthService} from '../../services';
 
 const styles = StyleSheet.create({});
 
@@ -12,7 +13,7 @@ export default class SignUpScreen extends Component {
 	constructor(props) {
 		super(props);
 
-		this.refUsername = React.createRef();
+		this.refEmail = React.createRef();
 		this.refPassword = React.createRef();
 	}
 
@@ -21,11 +22,15 @@ export default class SignUpScreen extends Component {
 	 * @private
 	 */
 	_submit() {
-		const sUsername = this.refUsername.current.state.value;
+		if (!this.refEmail || !this.refPassword) {
+			return;
+		}
+
+		const sEmail = this.refEmail.current.state.value;
 		const sPassword = this.refPassword.current.state.value;
 
-		if (sUsername && sPassword) {
-			this.context.signUp(sUsername, sPassword);
+		if (sEmail && sPassword) {
+			AuthService.signUp(sEmail, sPassword);
 		}
 	}
 
@@ -36,8 +41,8 @@ export default class SignUpScreen extends Component {
 		return (
 			<View style={[container, mainContainer]}>
 				<AppInput
-					ref={this.refUsername}
-					sPlaceholder={i18n.t('placeholders.username')}
+					ref={this.refEmail}
+					sPlaceholder={i18n.t('placeholders.email')}
 				/>
 				<AppInput
 					ref={this.refPassword}
