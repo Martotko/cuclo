@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "840703768355",
+    "firebase_url": "https://cuclo-4232a.firebaseio.com",
+    "project_id": "cuclo-4232a",
+    "storage_bucket": "cuclo-4232a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840703768355:android:941e7e10ec8e52415ebe96",
+        "android_client_info": {
+          "package_name": "com.cuclo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840703768355-hbtk97jm5m86nh32b8n6120cr24429bn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs0ZWuLQ9hI7A0LgL3MsnjSFo4hZeub3E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840703768355-hbtk97jm5m86nh32b8n6120cr24429bn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

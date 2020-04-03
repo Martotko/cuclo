@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import styles from './styles';
 import {AuthService} from '../../services';
-import firebase from 'react-native-firebase';
 
 class LoadingScreen extends Component {
 	constructor(props) {

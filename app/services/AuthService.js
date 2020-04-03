@@ -16,6 +16,11 @@ export default {
 			.then(data => data.toJSON())
 			.then(data => {
 				//TODO store the user data
+			})
+			.catch(error => {
+				console.log(error.message);
+
+				window.test = error;
 			});
 	},
 	signOut: () => {

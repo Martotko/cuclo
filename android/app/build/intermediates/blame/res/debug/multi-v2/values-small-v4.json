@@ -4,7 +4,7 @@
             "outputFile": "/Users/i515832/Desktop/Projects/cuclo/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/8fad9f43fb6e99fbbef45e3da66b9d41/res/values-small-v4/values-small-v4.xml",
+                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/64d86f51e3a7084194287deea952fbf1/res/values-small-v4/values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

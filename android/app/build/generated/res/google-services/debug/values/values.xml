@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">840703768355-hbtk97jm5m86nh32b8n6120cr24429bn.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://cuclo-4232a.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">840703768355</string>
+    <string name="google_api_key" translatable="false">AIzaSyDs0ZWuLQ9hI7A0LgL3MsnjSFo4hZeub3E</string>
+    <string name="google_app_id" translatable="false">1:840703768355:android:941e7e10ec8e52415ebe96</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDs0ZWuLQ9hI7A0LgL3MsnjSFo4hZeub3E</string>
+    <string name="google_storage_bucket" translatable="false">cuclo-4232a.appspot.com</string>
+    <string name="project_id" translatable="false">cuclo-4232a</string>
+</resources>

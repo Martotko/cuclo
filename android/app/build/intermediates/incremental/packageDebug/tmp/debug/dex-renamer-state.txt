@@ -1,4 +1,4 @@
-#Sun Feb 23 11:48:45 EET 2020
+#Fri Apr 03 08:25:57 EEST 2020
 base.0=/Users/i515832/Desktop/Projects/cuclo/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
