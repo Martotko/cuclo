@@ -18,7 +18,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* cucloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* cucloTests.m */; };
 		7E0670C343B4CEE8CF9F45E4 /* libPods-cuclo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90628361334D3FAEBEA3A823 /* libPods-cuclo.a */; };
 		AECF45AF4172BBC392E0461E /* libPods-cuclo-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35158A8FDBB356E471E98A03 /* libPods-cuclo-tvOSTests.a */; };
-		C66296D224325D6B009D85FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C66296D124325D6B009D85FA /* GoogleService-Info.plist */; };
+		C6CCC833243EDE830082F14B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6CCC832243EDE830082F14B /* GoogleService-Info.plist */; };
 		E694C4BA2A128A9669BBDF0A /* libPods-cucloTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0D99A77525969FD5F9FAFD /* libPods-cucloTests.a */; };
 		FA009066598FDDDD9BECC285 /* libPods-cuclo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E252629D119888D15C5412 /* libPods-cuclo-tvOS.a */; };
 /* End PBXBuildFile section */
@@ -64,7 +64,7 @@
 		AE0D99A77525969FD5F9FAFD /* libPods-cucloTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cucloTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C045E4C33AB93D37088A29 /* Pods-cuclo-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cuclo-tvOS.release.xcconfig"; path = "Target Support Files/Pods-cuclo-tvOS/Pods-cuclo-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		C64D6DD424019172006A3775 /* cuclo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cuclo-Bridging-Header.h"; sourceTree = "<group>"; };
-		C66296D124325D6B009D85FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C6CCC832243EDE830082F14B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D07401056448800DC8E76796 /* Pods-cucloTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cucloTests.release.xcconfig"; path = "Target Support Files/Pods-cucloTests/Pods-cucloTests.release.xcconfig"; sourceTree = "<group>"; };
 		D7DC5E1D82154764BDD153E6 /* Pods-cuclo-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cuclo-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-cuclo-tvOSTests/Pods-cuclo-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		D8205A66919AA6ECA9352B67 /* Pods-cucloTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cucloTests.debug.xcconfig"; path = "Target Support Files/Pods-cucloTests/Pods-cucloTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
-				C66296D124325D6B009D85FA /* GoogleService-Info.plist */,
+				C6CCC832243EDE830082F14B /* GoogleService-Info.plist */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -346,8 +346,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				C6CCC833243EDE830082F14B /* GoogleService-Info.plist in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				C66296D224325D6B009D85FA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

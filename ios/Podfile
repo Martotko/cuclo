@@ -36,6 +36,7 @@ target 'cuclo' do
   pod 'react-native-video', :path => '../node_modules/react-native-video/react-native-video.podspec'
   pod 'Firebase/Core', '~> 6.13.0'
   pod 'Firebase/Auth', '~> 6.13.0'
+  pod 'Firebase/Storage', '~> 6.13.0'
 
   target 'cucloTests' do
     inherit! :search_paths

@@ -36,6 +36,9 @@ export default class AudioPLayer extends Component {
 		const {container} = styles;
 		const {center} = AppStyles;
 		const {bIsPlaying} = this.state;
+		console.log(this.props.source);
+		const {source} = this.props;
+
 		const sintel = require('./background.wav');
 		return (
 			<>
@@ -60,13 +63,15 @@ export default class AudioPLayer extends Component {
 				<IconButton nSize={30} sIcon="ios-shuffle" />
 				<IconButton nSize={30} sIcon="ios-star" />
 				<IconButton nSize={30} sIcon="ios-star-outline" />
-				<Video
-					paused={bIsPlaying}
-					source={sintel} // Can be a URL or a local file.
-					ref={this.player} // Store reference
-					// onBuffer={this.onBuffer} // Callback when remote video is buffering
-					// onError={this.videoError} // Callback when video cannot be loaded
-				/>
+				{source !== '' ? (
+					<Video
+						paused={bIsPlaying}
+						source={{uri: source}} // Can be a URL or a local file.
+						ref={this.player} // Store reference
+						// onBuffer={this.onBuffer} // Callback when remote video is buffering
+						// onError={this.videoError} // Callback when video cannot be loaded
+					/>
+				) : null}
 			</>
 		);
 	}
