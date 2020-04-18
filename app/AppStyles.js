@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 export const AppVariables = {
 	appGrey: '#a99f9f',
@@ -10,6 +10,7 @@ export const AppVariables = {
 	appOrange: '#ffa401',
 	appTitleFontSize: 28,
 	appButtonBorderRadius: 5,
+	appErrorColor: "#f54251"
 };
 
 const AppStyles = StyleSheet.create({

@@ -23,8 +23,6 @@ export default class HomeScreen extends Component {
 			.then(url => {
 				this.setState({url: url});
 			});
-
-		console.log(storage.ref('background.wav'));
 	}
 
 	render() {
@@ -35,7 +33,7 @@ export default class HomeScreen extends Component {
 					navigation={this.props.navigation}
 				/>
 				<View style={styles.container}>
-					<AudioPlayer source={this.state.url} />
+					{/* <AudioPlayer source={this.state.url} /> */}
 				</View>
 			</>
 		);

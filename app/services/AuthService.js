@@ -1,32 +1,21 @@
 import firebase from 'react-native-firebase';
 
 export default {
-	signIn: function(sEmail, sPassword) {
-		firebase
+	signIn: (sEmail, sPassword) => {
+		return firebase
 			.auth()
-			.signInWithEmailAndPassword(sEmail, sPassword)
-			.then(data => {
-				//TODO store the user data
-			});
+			.signInWithEmailAndPassword(sEmail, sPassword);
 	},
 	signUp: (sEmail, sPassword) => {
-		firebase
+		return firebase
 			.auth()
 			.createUserWithEmailAndPassword(sEmail, sPassword)
-			.then(data => data.toJSON())
-			.then(data => {
-				//TODO store the user data
-			})
-			.catch(error => {
-				console.log(error.message);
-
-				window.test = error;
-			});
+			.then(data => data.toJSON());
 	},
 	signOut: () => {
 		firebase.auth().signOut();
 	},
-	isLoggedIn: () => {},
+	isLoggedIn: () => { },
 	authStateListener: fnCallback => {
 		firebase.auth().onAuthStateChanged(fnCallback);
 	},

@@ -1,5 +1,5 @@
-import * as React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 import i18n from '../i18n';
 import AuthHomeScreen from '../screens/AuthHome';
 import SignInScreen from '../screens/SignIn';
@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 
 export default function AuthNavigator() {
 	return (
-		<Stack.Navigator initialRouteName="AuthHome">
+		<Stack.Navigator initialRouteName="SignIn">
 			<Stack.Screen
 				name="AuthHome"
 				component={AuthHomeScreen}
