@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const LoadingContext = createContext({
 	loadingCount: false,
-	showLoading: () => { },
+	startLoading: () => { },
 	stopLoading: () => { }
 })
 
@@ -29,14 +29,14 @@ function LoadingSpinner() {
 export function LoadingProvider({ children }) {
 	const [loading, toggleLoading] = useState({ bIsLoading: false });
 
-	const showLoading = () => toggleLoading({ bIsLoading: true });
+	const startLoading = () => toggleLoading({ bIsLoading: true });
 
 	const stopLoading = () => toggleLoading({ bIsLoading: false });
 
 	return (
 		<LoadingContext.Provider value={{
 			bIsLoading: loading.bIsLoading,
-			showLoading,
+			startLoading,
 			stopLoading
 		}}>
 			{children}

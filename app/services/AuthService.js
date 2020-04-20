@@ -1,4 +1,5 @@
 import firebase from 'react-native-firebase';
+import database from '@react-native-firebase/database';
 
 export default {
 	signIn: (sEmail, sPassword) => {
@@ -19,4 +20,7 @@ export default {
 	authStateListener: fnCallback => {
 		firebase.auth().onAuthStateChanged(fnCallback);
 	},
+	getTales: () => {
+		return database().ref().once('value');
+	}
 };

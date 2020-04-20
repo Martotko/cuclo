@@ -25,7 +25,7 @@ export default function SignInScreen() {
 	const refEmail = React.createRef();
 	const refPassword = React.createRef();
 
-	const [error, setError] = useState({ bHasError: false, sErrorMessage: '' })
+	const [error, setError] = useState({ bHasError: false, sErrorMessage: '' });
 
 	const context = useContext(LoadingContext);
 	/**
@@ -36,16 +36,18 @@ export default function SignInScreen() {
 		const sEmail = refEmail.current.state.value;
 		const sPassword = refPassword.current.state.value;
 
-		if (sEmail && sPassword) {
-			context.showLoading();
-			AuthService.signIn(sEmail, sPassword).then(data => {
-				setError({ bHasError: false, sErrorMessage: '' })
-				context.stopLoading();
-			}).catch(data => {
-				setError({ bHasError: true, sErrorMessage: data && data.message })
-				context.stopLoading();
-			})
+		if (!sEmail && !sPassword) {
+			return;
 		}
+
+		context.startLoading();
+		AuthService.signIn(sEmail, sPassword).then(data => {
+			setError({ bHasError: false, sErrorMessage: '' })
+			context.stopLoading();
+		}).catch(data => {
+			setError({ bHasError: true, sErrorMessage: data && data.message })
+			context.stopLoading();
+		})
 	}
 
 	const { mainContainer } = styles;
@@ -55,8 +57,7 @@ export default function SignInScreen() {
 			<AppInput ref={refEmail} sPlaceholder={i18n.t('placeholders.email')} />
 			<AppInput ref={refPassword} sPlaceholder={i18n.t('placeholders.password')} />
 			<AppButton sText={i18n.t('buttons.signIn')} fnPress={submit} />
-			{error.bHasError ?
-				<AppError sMessage={error.sErrorMessage} /> : null}
+			{error.bHasError ? <AppError sMessage={error.sErrorMessage} /> : null}
 		</View>
 	);
 }

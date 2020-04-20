@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React, { useContext, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-
 import AppStyles from '../../AppStyles';
 import AppInput from '../Components/AppInput';
 import AppButton from '../Components/AppButton';
 import i18n from '../../i18n';
 import { AuthService } from '../../services';
+import LoadingContext from "../../LoadingContext";
+import AppError from "../Components/AppError";
 
 const styles = StyleSheet.create({});
 
@@ -13,21 +14,28 @@ export default function SignUpScreen() {
 	const refEmail = React.createRef();
 	const refPassword = React.createRef();
 
+	const [error, setError] = useState({ bHasError: false, sErrorMessage: '' });
+	const context = useContext(LoadingContext);
 	/**
 	 * Submit
 	 * @private
 	 */
 	function submit() {
-		if (!refEmail || !refPassword) {
-			return;
-		}
-
 		const sEmail = refEmail.current.state.value;
 		const sPassword = refPassword.current.state.value;
 
-		if (sEmail && sPassword) {
-			AuthService.signUp(sEmail, sPassword);
+		if (!sEmail && !sPassword) {
+			return;
 		}
+
+		context.startLoading();
+		AuthService.signUp(sEmail, sPassword).then(data => {
+			setError({ bHasError: false, sErrorMessage: '' })
+			context.stopLoading();
+		}).catch(data => {
+			setError({ bHasError: true, sErrorMessage: data && data.message })
+			context.stopLoading();
+		})
 	}
 
 	const { mainContainer } = styles;
@@ -47,6 +55,7 @@ export default function SignUpScreen() {
 				sText={i18n.t('buttons.signUp')}
 				fnPress={submit}
 			/>
+			{error.bHasError ? <AppError sMessage={error.sErrorMessage} /> : null}
 		</View>
 	);
 }

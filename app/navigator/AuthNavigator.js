@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 
 export default function AuthNavigator() {
 	return (
-		<Stack.Navigator initialRouteName="SignIn">
+		<Stack.Navigator initialRouteName="AuthHome">
 			<Stack.Screen
 				name="AuthHome"
 				component={AuthHomeScreen}

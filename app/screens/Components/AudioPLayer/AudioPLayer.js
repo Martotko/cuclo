@@ -1,82 +1,140 @@
-import React, {Component} from 'react';
-import Video from 'react-native-video';
-import {StyleSheet, View} from 'react-native';
-import IconButton from '../IconButton';
-import AppStyles from '../../../AppStyles';
+// import React, { useState } from "react";
+// import PropTypes from "prop-types";
+// import TrackPlayer, {
+// 	useTrackPlayerProgress,
+// 	usePlaybackState,
+// 	useTrackPlayerEvents
+// } from "react-native-track-player";
 
-const styles = StyleSheet.create({
-	container: {
-		flexDirection: 'row',
-		width: '100%',
-		height: 75,
-		backgroundColor: 'green',
-	},
-});
-export default class AudioPLayer extends Component {
-	constructor(props) {
-		super(props);
+// import {
+// 	Image,
+// 	StyleSheet,
+// 	Text,
+// 	TouchableOpacity,
+// 	View,
+// 	ViewPropTypes
+// } from "react-native";
 
-		this.player = React.createRef();
-		this.state = {
-			bIsPlaying: false,
-		};
-	}
 
-	/**
-	 * Toggle Play/Pause
-	 * @private
-	 */
-	_togglePlay() {
-		console.log(this.player.current);
+// const styles = StyleSheet.create({
+// 	card: {
+// 		width: "80%",
+// 		elevation: 1,
+// 		borderRadius: 4,
+// 		shadowRadius: 2,
+// 		shadowOpacity: 0.1,
+// 		alignItems: "center",
+// 		shadowColor: "black",
+// 		backgroundColor: "white",
+// 		shadowOffset: { width: 0, height: 1 }
+// 	},
+// 	cover: {
+// 		width: 140,
+// 		height: 140,
+// 		marginTop: 20,
+// 		backgroundColor: "grey"
+// 	},
+// 	progress: {
+// 		height: 1,
+// 		width: "90%",
+// 		marginTop: 10,
+// 		flexDirection: "row"
+// 	},
+// 	title: {
+// 		marginTop: 10
+// 	},
+// 	artist: {
+// 		fontWeight: "bold"
+// 	},
+// 	controls: {
+// 		marginVertical: 20,
+// 		flexDirection: "row"
+// 	},
+// 	controlButtonContainer: {
+// 		flex: 1
+// 	},
+// 	controlButtonText: {
+// 		fontSize: 18,
+// 		textAlign: "center"
+// 	}
+// });
 
-		this.setState({bIsPlaying: !this.state.bIsPlaying});
-	}
+// function ProgressBar() {
+// 	const progress = useTrackPlayerProgress();
 
-	render() {
-		const {container} = styles;
-		const {center} = AppStyles;
-		const {bIsPlaying} = this.state;
-		console.log(this.props.source);
-		const {source} = this.props;
+// 	return (
+// 		<View style={styles.progress}>
+// 			<View style={{ flex: progress.position, backgroundColor: "red" }} />
+// 			<View
+// 				style={{
+// 					flex: progress.duration - progress.position,
+// 					backgroundColor: "grey"
+// 				}}
+// 			/>
+// 		</View>
+// 	);
+// }
 
-		const sintel = require('./background.wav');
-		return (
-			<>
-				<View style={[container, center]}>
-					<IconButton nSize={30} sIcon="ios-skip-backward" />
-					{bIsPlaying ? (
-						<IconButton
-							nSize={50}
-							sIcon="ios-play"
-							fnPress={this._togglePlay.bind(this)}
-						/>
-					) : (
-						<IconButton
-							nSize={50}
-							sIcon="ios-pause"
-							fnPress={this._togglePlay.bind(this)}
-						/>
-					)}
-					<IconButton nSize={30} sIcon="ios-skip-forward" />
-				</View>
+// function ControlButton({ title, onPress }) {
+// 	return (
+// 		<TouchableOpacity style={styles.controlButtonContainer} onPress={onPress}>
+// 			<Text style={styles.controlButtonText}>{title}</Text>
+// 		</TouchableOpacity>
+// 	);
+// }
 
-				<IconButton nSize={30} sIcon="ios-shuffle" />
-				<IconButton nSize={30} sIcon="ios-star" />
-				<IconButton nSize={30} sIcon="ios-star-outline" />
-				{source !== '' ? (
-					<Video
-						paused={bIsPlaying}
-						source={{uri: source}} // Can be a URL or a local file.
-						ref={this.player} // Store reference
-						// onBuffer={this.onBuffer} // Callback when remote video is buffering
-						// onError={this.videoError} // Callback when video cannot be loaded
-					/>
-				) : null}
-			</>
-		);
-	}
-}
+// ControlButton.propTypes = {
+// 	title: PropTypes.string.isRequired,
+// 	onPress: PropTypes.func.isRequired
+// };
 
-AudioPLayer.propTypes = {};
+// export default function Player(props) {
+// 	const playbackState = usePlaybackState();
+// 	const [trackTitle, setTrackTitle] = useState("");
+// 	const [trackArtwork, setTrackArtwork] = useState("");
+// 	const [trackArtist, setTrackArtist] = useState("");
+// 	useTrackPlayerEvents(["playback-track-changed"], async event => {
+// 		if (event.type === TrackPlayer.TrackPlayerEvents.PLAYBACK_TRACK_CHANGED) {
+// 			const track = await TrackPlayer.getTrack(event.nextTrack);
+// 			setTrackTitle(track.title);
+// 			setTrackArtist(track.artist);
+// 			setTrackArtwork(track.artwork);
+// 		}
+// 	});
 
-AudioPLayer.defaultProps = {};
+// 	const { style, onNext, onPrevious, onTogglePlayback } = props;
+
+// 	let middleButtonText = "Play";
+
+// 	if (
+// 		playbackState === TrackPlayer.STATE_PLAYING ||
+// 		playbackState === TrackPlayer.STATE_BUFFERING
+// 	) {
+// 		middleButtonText = "Pause";
+// 	}
+
+// 	return (
+// 		<View style={[styles.card, style]}>
+// 			<Image style={styles.cover} source={{ uri: trackArtwork }} />
+// 			<ProgressBar />
+// 			<Text style={styles.title}>{trackTitle}</Text>
+// 			<Text style={styles.artist}>{trackArtist}</Text>
+// 			<View style={styles.controls}>
+// 				<ControlButton title={"<<"} onPress={onPrevious} />
+// 				<ControlButton title={middleButtonText} onPress={onTogglePlayback} />
+// 				<ControlButton title={">>"} onPress={onNext} />
+// 			</View>
+// 		</View>
+// 	);
+// }
+
+// Player.propTypes = {
+// 	style: ViewPropTypes.style,
+// 	onNext: PropTypes.func.isRequired,
+// 	onPrevious: PropTypes.func.isRequired,
+// 	onTogglePlayback: PropTypes.func.isRequired
+// };
+
+// Player.defaultProps = {
+// 	style: {}
+// };
