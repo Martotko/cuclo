@@ -19,6 +19,8 @@
 		7E0670C343B4CEE8CF9F45E4 /* libPods-cuclo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90628361334D3FAEBEA3A823 /* libPods-cuclo.a */; };
 		AECF45AF4172BBC392E0461E /* libPods-cuclo-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35158A8FDBB356E471E98A03 /* libPods-cuclo-tvOSTests.a */; };
 		C6CCC833243EDE830082F14B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6CCC832243EDE830082F14B /* GoogleService-Info.plist */; };
+		C6F9D3D3244E02A800570B2A /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F9D3D2244E02A800570B2A /* dummy.swift */; };
+		C6F9D3D4244E02A800570B2A /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F9D3D2244E02A800570B2A /* dummy.swift */; };
 		E694C4BA2A128A9669BBDF0A /* libPods-cucloTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0D99A77525969FD5F9FAFD /* libPods-cucloTests.a */; };
 		FA009066598FDDDD9BECC285 /* libPods-cuclo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E252629D119888D15C5412 /* libPods-cuclo-tvOS.a */; };
 /* End PBXBuildFile section */
@@ -63,8 +65,10 @@
 		90628361334D3FAEBEA3A823 /* libPods-cuclo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cuclo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0D99A77525969FD5F9FAFD /* libPods-cucloTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cucloTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C045E4C33AB93D37088A29 /* Pods-cuclo-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cuclo-tvOS.release.xcconfig"; path = "Target Support Files/Pods-cuclo-tvOS/Pods-cuclo-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		C64D6DD424019172006A3775 /* cuclo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cuclo-Bridging-Header.h"; sourceTree = "<group>"; };
 		C6CCC832243EDE830082F14B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C6F9D3D1244E02A700570B2A /* cucloTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cucloTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		C6F9D3D2244E02A800570B2A /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
+		C6F9D3DD244E062500570B2A /* cuclo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cuclo-Bridging-Header.h"; sourceTree = "<group>"; };
 		D07401056448800DC8E76796 /* Pods-cucloTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cucloTests.release.xcconfig"; path = "Target Support Files/Pods-cucloTests/Pods-cucloTests.release.xcconfig"; sourceTree = "<group>"; };
 		D7DC5E1D82154764BDD153E6 /* Pods-cuclo-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cuclo-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-cuclo-tvOSTests/Pods-cuclo-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		D8205A66919AA6ECA9352B67 /* Pods-cucloTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cucloTests.debug.xcconfig"; path = "Target Support Files/Pods-cucloTests/Pods-cucloTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,7 +140,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				C64D6DD424019172006A3775 /* cuclo-Bridging-Header.h */,
+				C6F9D3D2244E02A800570B2A /* dummy.swift */,
+				C6F9D3DD244E062500570B2A /* cuclo-Bridging-Header.h */,
+				C6F9D3D1244E02A700570B2A /* cucloTests-Bridging-Header.h */,
 			);
 			name = cuclo;
 			sourceTree = "<group>";
@@ -296,6 +302,7 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 1020;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
@@ -589,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6F9D3D4244E02A800570B2A /* dummy.swift in Sources */,
 				00E356F31AD99517003FC87E /* cucloTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,6 +606,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				C6F9D3D3244E02A800570B2A /* dummy.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -651,7 +660,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D8205A66919AA6ECA9352B67 /* Pods-cucloTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -666,6 +677,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "cucloTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cuclo.app/cuclo";
 			};
 			name = Debug;
@@ -674,7 +688,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D07401056448800DC8E76796 /* Pods-cucloTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = cucloTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -686,6 +702,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "cucloTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cuclo.app/cuclo";
 			};
 			name = Release;
