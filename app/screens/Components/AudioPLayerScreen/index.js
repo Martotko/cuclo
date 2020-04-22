@@ -1,6 +1,6 @@
-import AudioPLayerScreen from './AudioPLayerScreen';
+import AudioPlayerScreen from './AudioPlayerScreen';
 import PlayerButton from './PlayerButton';
 import ProgressBar from "./ProgressBar";
 
 export { PlayerButton, ProgressBar };
-export default AudioPLayerScreen;
+export default AudioPlayerScreen;

@@ -191,14 +191,8 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    compile project(':react-native-track-player')
     implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
-    implementation project(':react-native-firebase')
-    // Firebase dependencies
-    implementation "com.google.android.gms:play-services-base:16.1.0"
-    implementation "com.google.firebase:firebase-auth:17.0.0"
-    implementation "com.google.firebase:firebase-core:16.0.9"
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";

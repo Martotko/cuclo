@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import AuthService from "../../services/AuthService";
 import styles from './styles';
 import AppHeader from '../Components/AppHeader';
-import AudioPlayer from '../Components/AudioPLayer';
+import AudioPlayerScreen from '../Components/AudioPlayerScreen';
 import LoadingContext from "../../LoadingContext";
 
 export default function HomeScreen({ route, navigation }) {
@@ -29,7 +29,7 @@ export default function HomeScreen({ route, navigation }) {
 				navigation={navigation}
 			/>
 			<View style={styles.container}>
-				<AudioPlayer source={tales.url} />
+				<AudioPlayerScreen source={tales.url} />
 			</View>
 		</>
 	);
