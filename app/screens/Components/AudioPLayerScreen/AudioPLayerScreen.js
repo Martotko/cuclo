@@ -110,6 +110,8 @@ export default function AudioPlayerScreen({ track }) {
 	}, []);
 
 	useEffect(() => {
+		console.log(TrackPlayer);
+
 		TrackPlayer.setupPlayer();
 		TrackPlayer.updateOptions({
 			stopWithApp: true,
@@ -125,6 +127,10 @@ export default function AudioPlayerScreen({ track }) {
 				TrackPlayer.CAPABILITY_PAUSE
 			]
 		});
+
+		// Destroy when leaving the page
+		// TODO check if this is required
+		return TrackPlayer.destroy();
 	}, []);
 
 	async function togglePlayback() {
