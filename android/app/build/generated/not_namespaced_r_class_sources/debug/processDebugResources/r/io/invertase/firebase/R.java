@@ -428,7 +428,6 @@ public final class R {
         public static final int material_grey_900 = 0x7f050072;
         public static final int notification_action_color_filter = 0x7f0500b0;
         public static final int notification_icon_bg_color = 0x7f0500b1;
-        public static final int notification_material_background_media_default_color = 0x7f0500b2;
         public static final int primary_dark_material_dark = 0x7f0500b3;
         public static final int primary_dark_material_light = 0x7f0500b4;
         public static final int primary_material_dark = 0x7f0500b5;
@@ -561,10 +560,6 @@ public final class R {
         public static final int notification_subtext_size = 0x7f06013a;
         public static final int notification_top_pad = 0x7f06013b;
         public static final int notification_top_pad_large_text = 0x7f06013c;
-        public static final int subtitle_corner_radius = 0x7f06013d;
-        public static final int subtitle_outline_width = 0x7f06013e;
-        public static final int subtitle_shadow_offset = 0x7f06013f;
-        public static final int subtitle_shadow_radius = 0x7f060140;
         public static final int tooltip_corner_radius = 0x7f060142;
         public static final int tooltip_horizontal_padding = 0x7f060143;
         public static final int tooltip_margin = 0x7f060144;
@@ -707,7 +702,6 @@ public final class R {
         public static final int accessibility_role = 0x7f08002e;
         public static final int accessibility_state = 0x7f08002f;
         public static final int accessibility_states = 0x7f080030;
-        public static final int action0 = 0x7f080031;
         public static final int action_bar = 0x7f080032;
         public static final int action_bar_activity_content = 0x7f080033;
         public static final int action_bar_container = 0x7f080034;
@@ -736,7 +730,6 @@ public final class R {
         public static final int blocking = 0x7f08004e;
         public static final int bottom = 0x7f08004f;
         public static final int buttonPanel = 0x7f080050;
-        public static final int cancel_action = 0x7f080051;
         public static final int catalyst_redbox_title = 0x7f080053;
         public static final int center = 0x7f080054;
         public static final int centerCrop = 0x7f080055;
@@ -752,7 +745,6 @@ public final class R {
         public static final int default_activity_button = 0x7f08006d;
         public static final int edit_query = 0x7f080076;
         public static final int end = 0x7f080077;
-        public static final int end_padder = 0x7f080078;
         public static final int expand_activities_button = 0x7f08007c;
         public static final int expanded_menu = 0x7f08007d;
         public static final int fitBottomStart = 0x7f080084;
@@ -777,7 +769,6 @@ public final class R {
         public static final int line3 = 0x7f0800a2;
         public static final int listMode = 0x7f0800a3;
         public static final int list_item = 0x7f0800a4;
-        public static final int media_actions = 0x7f0800a6;
         public static final int message = 0x7f0800a7;
         public static final int multiply = 0x7f0800c4;
         public static final int none = 0x7f0800c8;
@@ -825,7 +816,6 @@ public final class R {
         public static final int src_over = 0x7f08010b;
         public static final int standard = 0x7f08010c;
         public static final int start = 0x7f08010d;
-        public static final int status_bar_latest_event_content = 0x7f08010e;
         public static final int submenuarrow = 0x7f080110;
         public static final int submit_area = 0x7f080111;
         public static final int tabMode = 0x7f080112;
@@ -896,17 +886,8 @@ public final class R {
         public static final int fps_view = 0x7f0b002d;
         public static final int notification_action = 0x7f0b004a;
         public static final int notification_action_tombstone = 0x7f0b004b;
-        public static final int notification_media_action = 0x7f0b004c;
-        public static final int notification_media_cancel_action = 0x7f0b004d;
-        public static final int notification_template_big_media = 0x7f0b004e;
-        public static final int notification_template_big_media_custom = 0x7f0b004f;
-        public static final int notification_template_big_media_narrow = 0x7f0b0050;
-        public static final int notification_template_big_media_narrow_custom = 0x7f0b0051;
         public static final int notification_template_custom_big = 0x7f0b0052;
         public static final int notification_template_icon_group = 0x7f0b0053;
-        public static final int notification_template_lines_media = 0x7f0b0054;
-        public static final int notification_template_media = 0x7f0b0055;
-        public static final int notification_template_media_custom = 0x7f0b0056;
         public static final int notification_template_part_chronometer = 0x7f0b0057;
         public static final int notification_template_part_time = 0x7f0b0058;
         public static final int redbox_item_frame = 0x7f0b0059;
@@ -1272,14 +1253,9 @@ public final class R {
         public static final int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 0x7f0f015f;
         public static final int TextAppearance_Compat_Notification = 0x7f0f0160;
         public static final int TextAppearance_Compat_Notification_Info = 0x7f0f0161;
-        public static final int TextAppearance_Compat_Notification_Info_Media = 0x7f0f0162;
         public static final int TextAppearance_Compat_Notification_Line2 = 0x7f0f0163;
-        public static final int TextAppearance_Compat_Notification_Line2_Media = 0x7f0f0164;
-        public static final int TextAppearance_Compat_Notification_Media = 0x7f0f0165;
         public static final int TextAppearance_Compat_Notification_Time = 0x7f0f0166;
-        public static final int TextAppearance_Compat_Notification_Time_Media = 0x7f0f0167;
         public static final int TextAppearance_Compat_Notification_Title = 0x7f0f0168;
-        public static final int TextAppearance_Compat_Notification_Title_Media = 0x7f0f0169;
         public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 0x7f0f0181;
         public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 0x7f0f0182;
         public static final int TextAppearance_Widget_AppCompat_Toolbar_Title = 0x7f0f0183;
