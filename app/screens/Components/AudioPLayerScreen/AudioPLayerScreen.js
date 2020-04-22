@@ -92,7 +92,7 @@ async function skipToPrevious() {
 	}
 }
 
-export default function AudioPLayerScreen({ track }) {
+export default function AudioPlayerScreen({ track }) {
 	const playbackState = TrackPlayer.usePlaybackState();
 	const [tales, setTales] = useState({});
 	const context = useContext(LoadingContext);
@@ -187,15 +187,15 @@ export default function AudioPLayerScreen({ track }) {
 	);
 }
 
-AudioPLayerScreen.navigationOptions = {
+AudioPlayerScreen.navigationOptions = {
 	title: "Playlist Example"
 };
 
-AudioPLayerScreen.propTypes = {
+AudioPlayerScreen.propTypes = {
 	track: PropTypes.objectOf(Object),
 };
 
-AudioPLayerScreen.defaultProps = {
+AudioPlayerScreen.defaultProps = {
 	track: {
 		id: 0,
 		title: '',

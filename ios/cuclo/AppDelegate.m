@@ -18,7 +18,9 @@
 {
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
 
-  [FIRApp configure];
+  if ([FIRApp defaultApp] == nil) {
+    [FIRApp configure];
+  }
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"cuclo"
