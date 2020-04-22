@@ -33,15 +33,6 @@ target 'cuclo' do
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
-<<<<<<< HEAD
-  pod 'Firebase/App', '~> 6.13.0'
-  pod 'Firebase/Auth', '~> 6.13.0'
-  pod 'Firebase/Database', '~> 6.13.0'
-=======
-  # pod 'Firebase/Core', '~> 6.13.0'
-  pod 'Firebase/Auth', '~> 6.13.0'
-  # pod 'Firebase/Storage', '~> 6.13.0'
->>>>>>> c82d4e56c92009b7c36bbc1aed83c3843a3322b4
 
   target 'cucloTests' do
     inherit! :search_paths
