@@ -205,5 +205,3 @@ AudioPlayerScreen.propTypes = {
 AudioPlayerScreen.defaultProps = {
 	aPlaylist: [oInitialTrackObject]
 };
-
-
