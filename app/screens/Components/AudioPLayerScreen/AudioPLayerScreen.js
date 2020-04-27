@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import PropTypes from "prop-types";
 import TrackPlayer from "react-native-track-player";
 import {
@@ -7,7 +7,6 @@ import {
 	Text,
 	View
 } from "react-native";
-import AuthService from '../../../services/AuthService';
 import ProgressBar from "./ProgressBar";
 import PlayerButton from "./PlayerButton";
 import LoadingContext from '../../../LoadingContext';
@@ -92,26 +91,21 @@ async function skipToPrevious() {
 	}
 }
 
-export default function AudioPlayerScreen({ track }) {
+const oInitialTrackObject = {
+	id: 0,
+	title: '',
+	artist: '',
+	artwork: '',
+	url: 'a'
+}
+
+export default function AudioPlayerScreen({ aPlaylist }) {
+	let sMiddleButtonText;
 	const playbackState = TrackPlayer.usePlaybackState();
-	const [tales, setTales] = useState({});
+	const [oCurrentTrack, setCurrentTrack] = useState(oInitialTrackObject);
 	const context = useContext(LoadingContext);
 
 	useEffect(() => {
-		context.startLoading();
-		AuthService.getTales().then(snapshot => {
-			console.log('Tales - ', snapshot.val());
-			snapshot && setTales(snapshot.val());
-			context.stopLoading();
-		}).catch(err => {
-			console.log('Set error message -> ', err && err.message);
-			context.stopLoading();
-		});
-	}, []);
-
-	useEffect(() => {
-		console.log(TrackPlayer);
-
 		TrackPlayer.setupPlayer();
 		TrackPlayer.updateOptions({
 			stopWithApp: true,
@@ -133,19 +127,20 @@ export default function AudioPlayerScreen({ track }) {
 		return TrackPlayer.destroy();
 	}, []);
 
+	useEffect(() => {
+		async function setPlaylist() {
+			await TrackPlayer.reset();
+			await TrackPlayer.add(aPlaylist);
+		}
+		setPlaylist(aPlaylist);
+		setCurrentTrack(aPlaylist[0]);
+	}, [aPlaylist])
+
 	async function togglePlayback() {
 		const currentTrack = await TrackPlayer.getCurrentTrack();
 		if (currentTrack == null) {
 			await TrackPlayer.reset();
-			// TODO it will be used later when we load a whole playlist
-			// await TrackPlayer.add(playlistData);
-			await TrackPlayer.add({
-				id: tales.id,
-				url: tales.url,
-				title: tales.title,
-				artist: tales.artist,
-				artwork: tales.artwork
-			});
+			// await TrackPlayer.add(aPlaylist);
 			await TrackPlayer.play();
 		} else if (playbackState === TrackPlayer.STATE_PAUSED) {
 			await TrackPlayer.play();
@@ -156,17 +151,22 @@ export default function AudioPlayerScreen({ track }) {
 
 	TrackPlayer.useTrackPlayerEvents(["playback-track-changed"], async event => {
 		if (event.type === TrackPlayer.TrackPlayerEvents.PLAYBACK_TRACK_CHANGED) {
-			// const track = await TrackPlayer.getTrack(event.nextTrack);
+			const oCurrent = await TrackPlayer.getTrack(event.nextTrack);
+			setCurrentTrack(oCurrent);
+		}
+	});
+	TrackPlayer.useTrackPlayerEvents(["playback-state"], async event => {
+		if (event.type === TrackPlayer.TrackPlayerEvents.PLAYBACK_TRACK_CHANGED) {
+			const oCurrent = await TrackPlayer.getTrack(event.nextTrack);
+			setCurrentTrack(oCurrent);
 		}
 	});
 
-	let middleButtonText = "Play";
-
-	if (
-		playbackState === TrackPlayer.STATE_PLAYING ||
-		playbackState === TrackPlayer.STATE_BUFFERING
-	) {
-		middleButtonText = "Pause";
+	if (playbackState === TrackPlayer.STATE_PLAYING ||
+		playbackState === TrackPlayer.STATE_BUFFERING) {
+		sMiddleButtonText = "Pause";
+	} else {
+		sMiddleButtonText = "Play";
 	}
 
 	return (
@@ -177,17 +177,18 @@ export default function AudioPlayerScreen({ track }) {
 				allows us to track playback time.
 		</Text>
 			<View style={[styles.card]}>
-				<Image style={styles.cover} source={{ uri: "https://cf.geekdo-images.com/opengraph/img/xEt5R-cc1TkASC-nCDR5HgtC4rk=/fit-in/1200x630/pic3714280.jpg" }} />
+				{oCurrentTrack && <Image style={styles.cover} source={{ uri: oCurrentTrack.artwork }} />}
 				<ProgressBar />
-				<Text style={styles.title}>{track.title}</Text>
-				<Text style={styles.artist}>{track.artist}</Text>
+				{oCurrentTrack && <Text style={styles.title}>{oCurrentTrack.title}</Text>}
+				{oCurrentTrack && <Text style={styles.artist}>{oCurrentTrack.artist}</Text>}
 				<View style={styles.controls}>
-					<PlayerButton title={"<<"} onPress={skipToNext} />
-					<PlayerButton title={middleButtonText} onPress={togglePlayback} />
-					<PlayerButton title={">>"} onPress={skipToPrevious} />
+					<PlayerButton title={"<<"} onPress={skipToPrevious} />
+					<PlayerButton title={sMiddleButtonText} onPress={togglePlayback} />
+					<PlayerButton title={">>"} onPress={skipToNext} />
 				</View>
 			</View>
 			<Text style={styles.state}>{getStateName(playbackState)}</Text>
+			<PlayerButton title="Test button" onPress={async () => { console.log(await TrackPlayer.getPosition()) }} />
 		</View>
 
 	);
@@ -198,15 +199,11 @@ AudioPlayerScreen.navigationOptions = {
 };
 
 AudioPlayerScreen.propTypes = {
-	track: PropTypes.objectOf(Object),
+	aPlaylist: PropTypes.arrayOf(Object)
 };
 
 AudioPlayerScreen.defaultProps = {
-	track: {
-		id: 0,
-		title: '',
-		artist: '',
-		artwork: '',
-		url: ''
-	}
+	aPlaylist: [oInitialTrackObject]
 };
+
+

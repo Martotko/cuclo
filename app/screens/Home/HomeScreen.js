@@ -6,20 +6,22 @@ import styles from './styles';
 import AppHeader from '../Components/AppHeader';
 import AudioPlayerScreen from '../Components/AudioPlayerScreen';
 import LoadingContext from "../../LoadingContext";
+import mockData from './mockData';
 
 export default function HomeScreen({ route, navigation }) {
-	const [tales, setTales] = useState({});
+	const [aTalesPlaylist, setTalesPlaylist] = useState([{}]);
 	const context = useContext(LoadingContext);
 
 	useEffect(() => {
-		context.startLoading();
-		AuthService.getTales().then(snapshot => {
-			snapshot && setTales(snapshot.val());
-			context.stopLoading();
-		}).catch(err => {
-			console.log('Set error message -> ', err && err.message);
-			context.stopLoading();
-		});
+		setTalesPlaylist(mockData);
+
+		// context.startLoading();
+		// AuthService.getTales().then(snapshot => {
+		// 	snapshot && setTales(snapshot.val());
+		// 	context.stopLoading();
+		// }).catch(err => {
+		// 	context.stopLoading();
+		// });
 	}, []);
 
 	return (
@@ -29,7 +31,7 @@ export default function HomeScreen({ route, navigation }) {
 				navigation={navigation}
 			/>
 			<View style={styles.container}>
-				<AudioPlayerScreen source={tales.url} />
+				<AudioPlayerScreen aPlaylist={aTalesPlaylist} />
 			</View>
 		</>
 	);
