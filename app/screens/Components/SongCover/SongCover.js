@@ -26,7 +26,7 @@ export default function SongCover({ oDetails, fnOnPress }) {
 	const [background, setBackground] = useState({ uri: "https://reactjs.org/logo-og.png" });
 
 	useEffect(() => {
-		console.log('here', oDetails);
+		console.log(oDetails.artwork);
 
 		setBackground({ uri: oDetails.artwork });
 		setSongDetails(oDetails);

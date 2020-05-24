@@ -1,21 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AppStyles, {AppVariables} from '../../../AppStyles';
-import {StyleSheet} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import { StyleSheet } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/Ionicons';
-
-IconButton.propTypes = {
-	nSize: PropTypes.number,
-	sIcon: PropTypes.string,
-	fnPress: PropTypes.func,
-};
-
-IconButton.defaultProps = {
-	nSize: AppVariables.appButtonFontSize,
-	sIcon: 'ios-play',
-	fnPress: () => {},
-};
+import AppStyles, { AppVariables } from '../../../AppStyles';
 
 const styles = StyleSheet.create({
 	container: {
@@ -27,9 +15,9 @@ const styles = StyleSheet.create({
 });
 
 export default function IconButton(props) {
-	const {nSize, sIcon, fnPress} = props;
-	const {container, iconStyle} = styles;
-	const {center} = AppStyles;
+	const { nSize, sIcon, fnPress } = props;
+	const { container, iconStyle } = styles;
+	const { center } = AppStyles;
 
 	return (
 		<TouchableOpacity style={[container, center]} onPress={fnPress}>
@@ -37,3 +25,15 @@ export default function IconButton(props) {
 		</TouchableOpacity>
 	);
 }
+
+IconButton.propTypes = {
+	nSize: PropTypes.number,
+	sIcon: PropTypes.string,
+	fnPress: PropTypes.func,
+};
+
+IconButton.defaultProps = {
+	nSize: AppVariables.fontSizeHeavy,
+	sIcon: 'ios-play',
+	fnPress: () => { },
+};

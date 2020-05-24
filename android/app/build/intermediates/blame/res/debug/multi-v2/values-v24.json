@@ -4,7 +4,17 @@
             "outputFile": "/Users/i515832/Desktop/Projects/cuclo/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/8f55b7810ea2c5433c76a45aa67208e2/res/values-v24/values-v24.xml",
+                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/45fb8b00ea8e31a633bb3fd8e82a9f29/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
+                {
+                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/9ccb61f1d2e2d547150b695cfd2a4fd8/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -18,16 +28,6 @@
                         "startOffsets": "347,413,474,540",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "408,469,535,602"
-                    }
-                },
-                {
-                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/7bcba014d9f26bc9b4d05bdc8350748f/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
                     }
                 }
             ]

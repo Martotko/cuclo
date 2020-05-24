@@ -4,26 +4,18 @@
             "outputFile": "/Users/i515832/Desktop/Projects/cuclo/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/64d86f51e3a7084194287deea952fbf1/res/values-v23/values-v23.xml",
+                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/45fb8b00ea8e31a633bb3fd8e82a9f29/res/values-v23/values-v23.xml",
                     "from": {
-                        "startLines": "2,6",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,320",
-                        "endLines": "5,9",
-                        "endColumns": "10,10",
-                        "endOffsets": "315,588"
-                    },
-                    "to": {
-                        "startLines": "51,55",
-                        "startColumns": "4,4",
-                        "startOffsets": "3557,3822",
-                        "endLines": "54,58",
-                        "endColumns": "10,10",
-                        "endOffsets": "3817,4090"
+                        "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1371,2267,2386,2513,2618,2842,2957,3064,3177",
+                        "endLines": "2,3,4,5,19,33,34,35,36,40,41,42,43,47",
+                        "endColumns": "134,134,74,86,12,12,118,126,104,12,114,106,112,12",
+                        "endOffsets": "185,320,395,482,1366,2262,2381,2508,2613,2837,2952,3059,3172,3402"
                     }
                 },
                 {
-                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/a1eb8c0708fc77abed3a27427d010086/res/values-v23/values-v23.xml",
+                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/dd6705317f822d5432f278bb86319de6/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -42,14 +34,22 @@
                     }
                 },
                 {
-                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/7bcba014d9f26bc9b4d05bdc8350748f/res/values-v23/values-v23.xml",
+                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/6ffc1191d0819c4c5c75cfc5a7c26197/res/values-v23/values-v23.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,190,325,400,487,1371,2267,2386,2513,2618,2842,2957,3064,3177",
-                        "endLines": "2,3,4,5,19,33,34,35,36,40,41,42,43,47",
-                        "endColumns": "134,134,74,86,12,12,118,126,104,12,114,106,112,12",
-                        "endOffsets": "185,320,395,482,1366,2262,2381,2508,2613,2837,2952,3059,3172,3402"
+                        "startLines": "2,6",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,320",
+                        "endLines": "5,9",
+                        "endColumns": "10,10",
+                        "endOffsets": "315,588"
+                    },
+                    "to": {
+                        "startLines": "51,55",
+                        "startColumns": "4,4",
+                        "startOffsets": "3557,3822",
+                        "endLines": "54,58",
+                        "endColumns": "10,10",
+                        "endOffsets": "3817,4090"
                     }
                 }
             ]

@@ -8,14 +8,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: 60,
-    backgroundColor: AppVariables.appGrey,
+    backgroundColor: AppVariables.colorHeavy,
     width: '80%',
     marginBottom: 10,
     borderRadius: AppVariables.appButtonBorderRadius,
   },
   textButton: {
     color: AppVariables.appWhite,
-    fontSize: AppVariables.appButtonFontSize,
+    fontSize: AppVariables.fontSizeHeavy,
     textAlign: 'center',
   },
 });
@@ -38,5 +38,5 @@ AppButton.propTypes = {
 
 AppButton.defaultProps = {
   sText: 'Click me',
-  fnPress: () => {},
+  fnPress: () => { },
 };

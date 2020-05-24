@@ -1,16 +1,21 @@
 import { StyleSheet } from 'react-native';
 
 export const AppVariables = {
-	appGrey: '#a99f9f',
-	appGreyLight: '#f1f0f0',
 	appBorderColor: '#444',
 	appWhite: '#fff',
 	appBlack: '#000',
-	appButtonFontSize: 28,
 	appOrange: '#ffa401',
-	appTitleFontSize: 28,
 	appButtonBorderRadius: 5,
-	appErrorColor: "#f54251"
+	appErrorColor: "#f54251",
+	fontSizeLight: 16,
+	fontSizeMedium: 22,
+	fontSizeHeavy: 28,
+	colorBackground: "white",
+	colorPrimaryText: 'black',
+	colorRed: 'red',
+	colorLight: '#f1f0f0',
+	colorMedium: '#cfc8c8',
+	colorHeavy: '#a99f9f'
 };
 
 const AppStyles = StyleSheet.create({

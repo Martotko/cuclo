@@ -4,7 +4,7 @@
             "outputFile": "/Users/i515832/Desktop/Projects/cuclo/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/7bcba014d9f26bc9b4d05bdc8350748f/res/values-xlarge-v4/values-xlarge-v4.xml",
+                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/45fb8b00ea8e31a633bb3fd8e82a9f29/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

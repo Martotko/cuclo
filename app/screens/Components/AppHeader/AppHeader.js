@@ -1,23 +1,23 @@
-import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';
-import {AppVariables} from '../../../AppStyles';
-import {StyleSheet} from 'react-native';
+import { AppVariables } from '../../../AppStyles';
+import { StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {TouchableOpacity} from 'react-native-gesture-handler';
-import {AuthService} from '../../../services';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { AuthService } from '../../../services';
 
 const styles = StyleSheet.create({
 	container: {
 		width: '100%',
 		height: 100,
-		backgroundColor: AppVariables.appGrey,
+		backgroundColor: AppVariables.colorHeavy,
 		justifyContent: 'center',
 		alignItems: 'flex-end',
 		flexDirection: 'row',
 	},
 	text: {
-		fontSize: AppVariables.appTitleFontSize,
+		fontSize: AppVariables.fontSizeHeavy,
 		color: AppVariables.appWhite,
 		paddingBottom: 10,
 	},
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
 		paddingBottom: 5,
 	},
 	iconStyle: {
-		color: AppVariables.appGreyLight,
+		color: AppVariables.colorLight,
 		fontSize: 40,
 	},
 });
@@ -66,7 +66,7 @@ export default class AppHeader extends Component {
 				</View>
 				<View style={containerTitle}>
 					<Text style={text} numberOfLines={1}>
-						{this.props.route?.name}
+						{this.props.route.name}
 					</Text>
 				</View>
 				<View>

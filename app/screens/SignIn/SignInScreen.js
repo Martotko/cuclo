@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useRef } from 'react';
 import { View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import AppButton from '../Components/AppButton';
@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
 });
 
 export default function SignInScreen() {
-	const refEmail = React.createRef();
-	const refPassword = React.createRef();
+	const refEmail = useRef();
+	const refPassword = useRef();
 
 	const [error, setError] = useState({ bHasError: false, sErrorMessage: '' });
 
@@ -33,19 +33,19 @@ export default function SignInScreen() {
 	 * @private
 	 */
 	function submit() {
-		const sEmail = refEmail.current.state.value;
-		const sPassword = refPassword.current.state.value;
+		const sEmail = refEmail.current.props.value;
+		const sPassword = refPassword.current.props.value;
 
-		if (!sEmail && !sPassword) {
+		if (!sEmail || !sPassword) {
 			return;
 		}
 
 		context.startLoading();
-		AuthService.signIn(sEmail, sPassword).then(data => {
-			setError({ bHasError: false, sErrorMessage: '' })
+		AuthService.signIn("Test@test.com", "test1234").then(data => {
+			setError({ bHasError: false, sErrorMessage: '' });
 			context.stopLoading();
-		}).catch(data => {
-			setError({ bHasError: true, sErrorMessage: data && data.message })
+		}).catch(error => {
+			setError({ bHasError: true, sErrorMessage: error && error.message })
 			context.stopLoading();
 		})
 	}
@@ -63,7 +63,6 @@ export default function SignInScreen() {
 }
 
 SignInScreen.propTypes = {
-	// navigation: PropTypes.objectOf(Object),
 };
 
 SignInScreen.defaultProps = {

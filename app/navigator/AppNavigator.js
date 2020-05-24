@@ -4,6 +4,7 @@ import i18n from '../i18n';
 import HomeScreen from '../screens/Home';
 import SettingsScreen from '../screens/Settings';
 import { AppVariables } from '../AppStyles';
+import AudioPlayerScreen from '../screens/AudioPlayerScreen/AudioPlayerScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -11,13 +12,13 @@ export default function AppNavigator() {
   return (
     <Drawer.Navigator
       drawerStyle={{
-        backgroundColor: AppVariables.appGreyLight,
+        backgroundColor: AppVariables.colorLight,
       }}
       drawerContentOptions={{
-        activeBackgroundColor: AppVariables.appGrey,
+        activeBackgroundColor: AppVariables.colorHeavy,
         activeTintColor: AppVariables.appWhite,
         labelStyle: {
-          fontSize: AppVariables.appButtonFontSize,
+          fontSize: AppVariables.fontSizeHeavy,
           borderRadius: AppVariables.appButtonBorderRadius,
         },
       }}
@@ -34,6 +35,16 @@ export default function AppNavigator() {
         component={SettingsScreen}
         options={{
           title: i18n.t('navigation.settings'),
+        }}
+      />
+      {/* Keep it last, because it shouldn't be visiblein the drawer menu */}
+      <Drawer.Screen
+        name="Player"
+        itemStyles={{ opacity: 0 }}
+        component={AudioPlayerScreen}
+        options={{
+          title: i18n.t('navigation.player'),
+          drawerLabel: () => null
         }}
       />
     </Drawer.Navigator>

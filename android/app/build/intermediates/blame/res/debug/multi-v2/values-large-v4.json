@@ -4,7 +4,17 @@
             "outputFile": "/Users/i515832/Desktop/Projects/cuclo/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/64d86f51e3a7084194287deea952fbf1/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/45fb8b00ea8e31a633bb3fd8e82a9f29/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,532,636",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,631,747"
+                    }
+                },
+                {
+                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/6ffc1191d0819c4c5c75cfc5a7c26197/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -18,16 +28,6 @@
                         "startOffsets": "752,874",
                         "endColumns": "121,133",
                         "endOffsets": "869,1003"
-                    }
-                },
-                {
-                    "source": "/Users/i515832/.gradle/caches/transforms-2/files-2.1/7bcba014d9f26bc9b4d05bdc8350748f/res/values-large-v4/values-large-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,114,185,256,326,396,464,532,636",
-                        "endColumns": "58,70,70,69,69,67,67,103,115",
-                        "endOffsets": "109,180,251,321,391,459,527,631,747"
                     }
                 }
             ]

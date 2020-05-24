@@ -18,7 +18,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* cucloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* cucloTests.m */; };
 		7E0670C343B4CEE8CF9F45E4 /* libPods-cuclo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90628361334D3FAEBEA3A823 /* libPods-cuclo.a */; };
 		AECF45AF4172BBC392E0461E /* libPods-cuclo-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35158A8FDBB356E471E98A03 /* libPods-cuclo-tvOSTests.a */; };
-		C6CCC833243EDE830082F14B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6CCC832243EDE830082F14B /* GoogleService-Info.plist */; };
+		C67AE8FD245E0E980097ECC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C67AE8FC245E0E980097ECC6 /* GoogleService-Info.plist */; };
 		C6F9D3D3244E02A800570B2A /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F9D3D2244E02A800570B2A /* dummy.swift */; };
 		C6F9D3D4244E02A800570B2A /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F9D3D2244E02A800570B2A /* dummy.swift */; };
 		E694C4BA2A128A9669BBDF0A /* libPods-cucloTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0D99A77525969FD5F9FAFD /* libPods-cucloTests.a */; };
@@ -65,7 +65,7 @@
 		90628361334D3FAEBEA3A823 /* libPods-cuclo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cuclo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0D99A77525969FD5F9FAFD /* libPods-cucloTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cucloTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C045E4C33AB93D37088A29 /* Pods-cuclo-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cuclo-tvOS.release.xcconfig"; path = "Target Support Files/Pods-cuclo-tvOS/Pods-cuclo-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		C6CCC832243EDE830082F14B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C67AE8FC245E0E980097ECC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C6F9D3D1244E02A700570B2A /* cucloTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cucloTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		C6F9D3D2244E02A800570B2A /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		C6F9D3DD244E062500570B2A /* cuclo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cuclo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
-				C6CCC832243EDE830082F14B /* GoogleService-Info.plist */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				C67AE8FC245E0E980097ECC6 /* GoogleService-Info.plist */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
@@ -354,8 +354,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				C6CCC833243EDE830082F14B /* GoogleService-Info.plist in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				C67AE8FD245E0E980097ECC6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

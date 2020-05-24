@@ -6,7 +6,8 @@
 		"singUp": "Sing Up",
 		"signIn": "Sign In",
 		"passwordReset": "Reset Password",
-		"settings": "Settings"
+		"settings": "Settings",
+		"player": "Player"
 	},
 	"home": {
 		"welcome": "Welcome to %{appName}!"

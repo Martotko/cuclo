@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useRef } from 'react';
 import { View, StyleSheet } from 'react-native';
 import AppStyles from '../../AppStyles';
 import AppInput from '../Components/AppInput';
@@ -11,8 +11,8 @@ import AppError from "../Components/AppError";
 const styles = StyleSheet.create({});
 
 export default function SignUpScreen() {
-	const refEmail = React.createRef();
-	const refPassword = React.createRef();
+	const refEmail = useRef();
+	const refPassword = useRef();
 
 	const [error, setError] = useState({ bHasError: false, sErrorMessage: '' });
 	const context = useContext(LoadingContext);
@@ -21,10 +21,10 @@ export default function SignUpScreen() {
 	 * @private
 	 */
 	function submit() {
-		const sEmail = refEmail.current.state.value;
-		const sPassword = refPassword.current.state.value;
+		const sEmail = refEmail.current.props.value;
+		const sPassword = refPassword.current.props.value;
 
-		if (!sEmail && !sPassword) {
+		if (!sEmail || !sPassword) {
 			return;
 		}
 
@@ -32,8 +32,8 @@ export default function SignUpScreen() {
 		AuthService.signUp(sEmail, sPassword).then(data => {
 			setError({ bHasError: false, sErrorMessage: '' })
 			context.stopLoading();
-		}).catch(data => {
-			setError({ bHasError: true, sErrorMessage: data && data.message })
+		}).catch(error => {
+			setError({ bHasError: true, sErrorMessage: error && error.message })
 			context.stopLoading();
 		})
 	}

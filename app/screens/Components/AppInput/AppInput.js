@@ -1,54 +1,39 @@
-import React, {Component} from 'react';
-import {TextInput} from 'react-native';
+import React, { useState } from 'react';
+import { TextInput, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
-import {AppVariables} from '../../../AppStyles';
-import {StyleSheet} from 'react-native';
+import { AppVariables } from '../../../AppStyles';
+
 
 const styles = StyleSheet.create({
 	textInput: {
-		backgroundColor: AppVariables.appGreyLight,
+		backgroundColor: AppVariables.colorLight,
 		height: 60,
 		width: '80%',
 		borderRadius: AppVariables.appButtonBorderRadius,
 		borderColor: AppVariables.appBorderColor,
 		borderWidth: 1,
 		marginBottom: 10,
-		fontSize: AppVariables.appButtonFontSize,
+		fontSize: AppVariables.fontSizeHeavy,
 		paddingLeft: 5,
 	},
 });
 
-export default class AppInput extends Component {
-	constructor(props) {
-		super(props);
+function AppInput({ sPlaceholder }, ref) {
+	const [value, setValue] = useState('');
+	const { textInput } = styles;
 
-		this.state = {
-			value: '',
-		};
-	}
-
-	/**
-	 * @param {string} sText Text which comes from user input
-	 * @private
-	 */
-	_setValue(sText) {
-		this.setState({value: sText});
-	}
-
-	render() {
-		const {sPlaceholder} = this.props;
-		const {textInput} = styles;
-		const {value} = this.state;
-		return (
-			<TextInput
-				style={textInput}
-				placeholder={sPlaceholder}
-				value={value}
-				onChangeText={this._setValue.bind(this)}
-			/>
-		);
-	}
+	return (
+		<TextInput
+			ref={ref}
+			style={textInput}
+			placeholder={sPlaceholder}
+			value={value}
+			onChangeText={e => setValue(e)}
+		/>
+	);
 }
+
+export default React.forwardRef(AppInput);
 
 AppInput.propTypes = {
 	sPlaceholder: PropTypes.string,
