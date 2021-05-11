@@ -954,7 +954,7 @@
   resolved "https://registry.yarnpkg.com/@react-native-firebase/app-types/-/app-types-6.7.1.tgz#93497885e6c112203db310636616647c16478da9"
   integrity sha512-jfP2wdBUaptGXO6BC0g3RYMgmGLGOkdWhkGxPhZZy1uxIxN4IXPfeUKEPL0as6ZJqfdx0IMvSvtcp7ywoFNxyg==
 
-"@react-native-firebase/app@^6.7.1":
+"@react-native-firebase/app@6.7.1":
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-6.7.1.tgz#0fe8bb9a82292d672da524763dc42e224dda4fde"
   integrity sha512-MzRlcR+5+RCU3Za+QMV064oPpZhkXvLoZbB8CdYxI66Qd2XKAGUT0FoQlFaeXZxkrfisdhLbvRUYJo1TY/Iuxg==
@@ -963,12 +963,12 @@
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
-"@react-native-firebase/auth@^6.7.1":
+"@react-native-firebase/auth@6.7.1":
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-6.7.1.tgz#d0e59e3f4960fdab7858af7bfcf408c4379147d4"
   integrity sha512-93t4UlyylX1iUj7jSyFfE4voLk2LmBw5oDJ/BdyfAO7u9DysXE4yu3kkaq+hBlBN4tlSfS+XwWXrigCplMbfpg==
 
-"@react-native-firebase/database@^6.7.1":
+"@react-native-firebase/database@6.7.1":
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/database/-/database-6.7.1.tgz#6bdbdfdc378d1c8f3a3f01a0fff0dfeccc1345a0"
   integrity sha512-kZ+Zr89E+s9nL1FkF+rzlah0uRjd2iAodmGkOzBmWhc937zpFe+lwxKPGykq6PeOFSMMPfKhOBefCjIb3aZUmQ==
@@ -3053,9 +3053,9 @@ hoist-non-react-statics@^2.3.1:
   integrity sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
 
 hosted-git-info@^2.1.4:
-  version "2.8.5"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.5.tgz#759cfcf2c4d156ade59b0b2dfabddc42a6b9c70c"
-  integrity sha512-kssjab8CvdXfcXMXVcvsXum4Hwdq9XGtRD3TteMEvEbq0LXyiNQr6AprqKqfeaDXze7SxWvRxdpwE6ku7ikLkg==
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
+  integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
 http-errors@~1.7.2:
   version "1.7.3"
@@ -4934,10 +4934,10 @@ react-native-swift@^1.2.3:
     "@raydeck/xcode" "^2.2.0"
     glob "^7.1.2"
 
-react-native-track-player@^1.1.8:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/react-native-track-player/-/react-native-track-player-1.2.2.tgz#97e6d956ac2de70ed24b2665799d48075750b1e9"
-  integrity sha512-+Fv+dF4D8TRkq9kQ9sWKfqYmmvjkKaA4wGG+PRQO3aHRHnaswZG5o9TFbbY7xaLWNTxmmcSMR0YNcMm/Of91xQ==
+react-native-track-player@1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/react-native-track-player/-/react-native-track-player-1.1.8.tgz#4827d46a14320c405d19f34593c3f999c2424b0f"
+  integrity sha512-pAGMgEHtnrnHQYI53qxeZ/dNbw5CNiCTMjj6L09CQrWvZ6cJwjOQeyz4/6aOs7HfUDJc3HLntzKwTHYT7ges0g==
 
 react-native-vector-icons@^6.6.0:
   version "6.6.0"
